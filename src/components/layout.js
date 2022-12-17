@@ -3,19 +3,23 @@ import { Link } from "gatsby";
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div>
+    <div className="font-sans m-auto max-w-screen-sm">
       <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
+        <ul className="flex list-none pl-0">
+          <li className="pr-8">
+            <Link to="/" className="text-black">
+              Home
+            </Link>
           </li>
-          <li>
-            <Link to="/about">About</Link>
+          <li className="pr-8">
+            <Link to="/about" className="text-black">
+              About
+            </Link>
           </li>
         </ul>
       </nav>
       <main>
-        <h1>{pageTitle}</h1>
+        <h1 className="text-purple-500 text-4xl font-bold">{pageTitle}</h1>
         {children}
       </main>
     </div>
